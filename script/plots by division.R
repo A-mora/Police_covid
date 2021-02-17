@@ -146,8 +146,6 @@ plot_fun_arrest <- function(x){
           plot.title = element_text(size = 10))  
 }
 
-# Name for titles.
-names(div_enf_list) <- sort(unique(cvi_police_long$div_name))
 
 # Plots and titles
 police_plots_arre <- list()
@@ -185,8 +183,6 @@ plot_fun_fpn <- function(x){
           plot.title = element_text(size = 10))  
 }
 
-# Name for titles.
-names(div_enf_list) <- sort(unique(cvi_police_long$div_name))
 
 # Plots and titles
 police_plots_fpn <- list()
@@ -223,8 +219,6 @@ plot_fun_force <- function(x){
           plot.title = element_text(size = 10))  
 }
 
-# Name for plot titles.
-names(div_enf_list) <- sort(unique(cvi_police_long$div_name))
 
 
 # plots and add titles.
@@ -262,8 +256,6 @@ plot_fun_instru <- function(x){
           plot.title = element_text(size = 10))  
 }
 
-# Name for plot titles
-names(div_enf_list) <- sort(unique(cvi_police_long$div_name))
 
 
 # Plots and add titles
