@@ -45,7 +45,7 @@ cvi_police <- read_excel("data/raw/feb_2021.xlsx",
   mutate(div_name = recode(div_code,
                            A= "North East",
                            D = "Tayside", 
-                           N = "Highlands & Islands",
+                           N = "Highlands and Islands",
                            C = "Forth Valley", 
                            E = "Edinburgh", 
                            J = "The Lothians & Scottish Borders", 
@@ -53,11 +53,12 @@ cvi_police <- read_excel("data/raw/feb_2021.xlsx",
                            G = "Glasgow",
                            U = "Ayrshire", 
                            Q = "Lanarkshire",
-                           L = "Argyll & West Dunbartonshire",
+                           L = "Argyll and West Dunbartonshire",
                            K = "Renfrewshire & Inverclyde",
                            V = "Dumfries & Galloway"))
   
 
+length(unique(cvi_police$subdiv_code))
 cvi_police <- cvi_police %>%
   group_by(div_name, week_year) %>%
   summarise_at(c("dis_infor", "dis_instru", "dis_force",
@@ -157,8 +158,8 @@ for (i in seq(div_enf_list)) {
 
 
 # Plot
-p2 <- plot_grid(plotlist = police_plots_arre, ncol = 3)
-ggsave(p2, filename = "arrested.png", height = 10, width = 8)
+p2 <- plot_grid(plotlist = police_plots_arre, ncol = 4)
+ggsave(p2, filename = "arrested.png", height = 8, width = 10)
 
 
 #-------------
@@ -194,8 +195,8 @@ for (i in seq(div_enf_list)) {
 
 
 # Plot
-p3 <- plot_grid(plotlist = police_plots_fpn, ncol = 3)
-ggsave(p3, filename = "fpn.png", height = 10, width = 8)
+p3 <- plot_grid(plotlist = police_plots_fpn, ncol = 4)
+ggsave(p3, filename = "fpn.png", height = 8, width = 10)
 
 
 #-------------
@@ -231,8 +232,8 @@ for (i in seq(div_enf_list)) {
 
 
 # Plot
-p4 <- plot_grid(plotlist = police_plots_force, ncol = 3)
-ggsave(p4, filename = "force.png", height = 10, width = 8)
+p4 <- plot_grid(plotlist = police_plots_force, ncol = 4)
+ggsave(p4, filename = "force.png", height = 8, width = 10)
 
 
 #-------------
@@ -268,6 +269,6 @@ for (i in seq(div_enf_list)) {
 
 
 # Plot
-p5 <- plot_grid(plotlist = police_plots_instru, ncol = 3)
-ggsave(p5, filename = "instructed.png", height = 10, width = 8)
+p5 <- plot_grid(plotlist = police_plots_instru, ncol = 4)
+ggsave(p5, filename = "instructed.png", height = 8, width = 10)
 

@@ -152,7 +152,7 @@ p4 <- police_plots_[[4]]
 p5 <- police_plots_[[5]]
 
 ggsave(p1, filename ="figures/arrest_rate.png" , units="in", width=10, height=7)
-ggsave(p2, filename ="figures/dis_force_rate.png" , units="in", width=10, height=7)
+ggsave(p2, filename ="figures/dis_force_rate1.png" , units="in", width=10, height=7)
 ggsave(p3, filename ="figures/dis_informed_rate.png" , units="in", width=10, height=7)
 ggsave(p4, filename ="figures/dis_instructed_rate.png" , units="in", width=10, height=7)
 ggsave(p5, filename ="figures/fpn_rate.png" , units="in", width=10, height=7)
